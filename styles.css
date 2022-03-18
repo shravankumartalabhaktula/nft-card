@@ -1,0 +1,173 @@
+@import "variables.css";
+
+html,
+body {
+  height: 100%;
+  font-size: 100%;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Outfit", sans-serif;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+h1, p {
+  margin: 0;
+}
+
+body {
+  background-color: var(--very-dark-blue);
+}
+
+main {
+  height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  background-color: var(--very-dark-blue-card);
+  padding: 15px;
+  border-radius: 15px;
+}
+
+.container {
+  max-width: 375px;
+  width: 350px;
+  margin: auto;
+}
+
+.card__image {
+  margin: 15px 0px;
+  position: relative;
+  cursor: pointer;
+}
+
+.card__image  img {
+  border-radius: 15px;
+}
+
+.card--position {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+}
+
+.overlay {
+  opacity: 0;
+  background-color: var(--cyan);
+  border-radius: 15px;
+}
+
+.overlay__image {
+  opacity: 0;
+  background-image: url("/images/icon-view.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.card__image:hover .overlay {
+  opacity: 0.5;
+}
+
+.card__image:hover .overlay__image {
+  opacity: 1;
+}
+
+.card__heading {
+  color: white;
+  margin-bottom: 15px;
+  cursor: pointer;
+}
+
+.card__heading:hover {
+  color: var(--cyan);
+}
+
+.card__description {
+  color: var(--very-dark-blue-main);
+  font-weight: 300;
+  font-size: var(--font-18);
+  opacity: 0.8;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.card__info {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+  border-bottom: 1px solid var(--very-dark-blue-main);
+  margin-bottom: 15px;
+}
+
+.card__item {
+  width: 120px;
+}
+
+.svg {
+  display: inline-block;
+  width: 12%;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.text {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: var(--font-18);
+  color: var(--cyan);
+  font-weight: 700;
+}
+
+.card--clock {
+  width: 18%;
+}
+
+.card--text {
+  color: var(--very-dark-blue-main);
+}
+
+.card__profile__pic {
+  width: 50px;
+  padding: 2px;
+  background-color: var(--white);
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.card__profile__info {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 25px;
+  font-size: var(--font-18);
+  color: var(--very-dark-blue-main);
+}
+
+.card__profile__info--text {
+  color: var(--white);
+  cursor: pointer;
+}
+
+.card__profile__info--text:hover {
+  color: var(--cyan);
+}
+
+footer {
+  color: var(--white);
+}
